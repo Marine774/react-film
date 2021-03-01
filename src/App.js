@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route, Switch,Link, BrowserRouter as Router  } from 'react-router-dom';
 import './App.css';
 
-import Films from "./Film/Film";
+import Films from "./Films/Films";
 import Categories from "./Categorie/Categorie"
 import Favoris from "./Favoris/Favoris"
 import Auteurs from "./Auteur/Auteur"

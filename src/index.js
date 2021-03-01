@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
+import store from "./Films/store";
+import App from "./App.js";
 
-ReactDOM.render(
-  <React.StrictMode>
+// if you're in create-react-app import the files as:
+// import store from "./js/store/index";
+// import App from "./js/components/App.js";
+
+render(
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  // The target element might be either root or app,
+  // depending on your development environment
+  // document.getElementById("app")
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
