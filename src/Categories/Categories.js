@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 
-
+import Posts from"./Posts"
 
 class Categories extends Component{
     render(){
@@ -8,7 +8,7 @@ class Categories extends Component{
             <div id="categories">
                 <h1>Categories</h1>
             
-        
+                <Posts/>
             </div>
         )
 		}

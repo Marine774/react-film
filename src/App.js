@@ -3,7 +3,7 @@ import { Route, Switch,Link, BrowserRouter as Router  } from 'react-router-dom';
 import './App.css';
 
 import Films from "./Films/Films";
-import Categories from "./Categorie/Categorie"
+import Categories from "./Categories/Categories"
 import Favoris from "./Favoris/Favoris"
 import Auteurs from "./Auteurs/Auteurs"
 import Admin from "./Admin/Admin"
