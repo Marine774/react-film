@@ -5,7 +5,7 @@ import './App.css';
 import Films from "./Films/Films";
 import Categories from "./Categorie/Categorie"
 import Favoris from "./Favoris/Favoris"
-import Auteurs from "./Auteur/Auteur"
+import Auteurs from "./Auteurs/Auteurs"
 import Admin from "./Admin/Admin"
 
 function App() {
