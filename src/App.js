@@ -4,13 +4,27 @@ import './App.css';
 
 import Films from "./Films/Films";
 import Categories from "./Categories/Categories"
-import Favoris from "./Favoris/Favoris"
 import Auteurs from "./Auteurs/Auteurs"
+import Favoris from "./Favoris/Favoris"
 import Admin from "./Admin/Admin"
+import PrivateRoute from './PrivateRoute';
+import { AuthContext } from "./Admin/Auth";
+import Login from "./Admin/Login";
 
-function App() {
+
+function App(props) {
+  const [authTokens, setAuthTokens] = useState();
+  
+  const setTokens = (data) => {
+    localStorage.setItem("tokens", JSON.stringify(data));
+    setAuthTokens(data);
+  }
+
+ 
   return (
-<Router>
+
+    <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
+    <Router>
     <nav className="navbar navbar-expand navbar-dark bg-dark">
         <div className="navbar-nav">
             <Link to="/Films" className="nav-item nav-link">Films</Link>
@@ -29,12 +43,17 @@ function App() {
           <Route path="/Auteurs" component={Auteurs} />
           <Route path="/Categories" component={Categories} />
           <Route path="/Favoris" component={Favoris} />
-          <Route path="/admin" component={Admin} />
+          <Route path="/login" component={Login} />
+          <PrivateRoute path="/admin" component={Admin} />
               </div>
           </div>
       </div>
   </div>
     </Router>
+  </AuthContext.Provider>
+
+
+   
   );
 }
 

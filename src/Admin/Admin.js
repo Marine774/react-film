@@ -1,17 +1,24 @@
-import React, { Component} from 'react';
+import React from "react";
+import { Button } from "./AuthForms";
+import { useAuth } from "./Auth";
+import { Route, Switch,Link, BrowserRouter as Router  } from 'react-router-dom';
 
 
+function Admin(props) {
+  const { setAuthTokens } = useAuth();
 
-class Admin extends Component{
-    render(){
-        return (
-            <div id="Admin">
-                <h1>Admin</h1>
-            
-              
-            </div>
-        )
-		}
+  function logOut() {
+    setAuthTokens();
+  }
+
+  return (
+    <div class="admin">
+      <h1>Page administrateur</h1>
+
+      
+
+    </div>
+  );
 }
 
 export default Admin;
