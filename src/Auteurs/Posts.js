@@ -14,10 +14,12 @@ export class Post extends Component {
   render() {
     return (
       <ul>
-        {this.props.articles.map(el => (
-          <li key={el.id}>{el.auteurs}</li>
-        ))}
-      </ul>
+      {this.props.articles.map(el => (
+        <p key={el.id}>
+          <p>{el.auteurs}</p>
+          </p>
+      ))}
+    </ul>
     );
   }
 }
