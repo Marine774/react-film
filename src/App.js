@@ -8,6 +8,7 @@ import Admin from "./Admin/Admin"
 import PrivateRoute from './PrivateRoute';
 import { AuthContext } from "./Admin/Auth";
 import Login from "./Admin/Login";
+import Detail from './Films/Detail';
 
 
 function App(props) {
@@ -36,6 +37,7 @@ function App(props) {
           <div className="row">
               <div className="">
           <Route  path="/Films" component={Films} />
+          <Route  path="/Detail" component={Detail} />
           <Route path="/Auteurs" component={Auteurs} />
           <Route path="/login" component={Login} />
           <PrivateRoute path="/admin" component={Admin} />
